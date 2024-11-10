@@ -1,0 +1,250 @@
+* {
+    margin:0;
+    padding:0;
+  }
+
+/* NAVIGATION */
+
+nav {
+    width: 100%;
+    background-color: #8ad4ef; 
+    padding-top: 10px;
+    color:#667432;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav h1 {
+    padding-left: 50px;
+    padding-top: 20px;
+    color:#667432;
+}
+
+nav h1:hover {
+    color:#E02526;
+
+}
+
+/* MAIN */
+
+main {
+    background: #8ad4ef; 
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tree container */
+
+.tree {
+    position: relative;
+    width: 400px;  /* Increased width for a larger tree */
+    height: 600px; /* Increased height for a larger tree */
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.triangle-1 {
+    border-bottom: 200px solid green; /* Increased triangle size */
+    top: 0;
+}
+
+.triangle-2 {
+    border-bottom: 240px solid green; /* Increased triangle size */
+    top: 120px; /* Adjusted position */
+}
+
+.triangle-3 {
+    border-bottom: 280px solid green; /* Increased triangle size */
+    top: 250px; /* Adjusted position */
+}
+
+.trunk {
+    width: 120px; /* Increased trunk width */
+    height: 160px; /* Increased trunk height */
+    background-color: #8B4513;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.light {
+    width: 25px;  /* Increased light size */
+    height: 25px; /* Increased light size */
+    border-radius: 50%;
+    position: absolute;
+    animation: blink 2s infinite;
+}
+
+.light:hover {
+    width: 30px;
+    height: 30px;
+    box-shadow: -3px 1px 39px 27px rgba(255,251,77,0.51);
+}
+
+/* Light positions adjusted for a bigger tree */
+
+.light .one {
+    top: 50px; 
+    left: 30px, 
+}
+
+
+.light:nth-child(5) { top: 50px; left: 130px; background-color: yellow; animation-delay: 0s; }
+.light:nth-child(6) { top: 70px; left: 260px; background-color: red; animation-delay: 0.2s; }
+.light:nth-child(7) { top: 130px; left: 60px; background-color: blue; animation-delay: 0.4s; }
+.light:nth-child(8) { top: 180px; left: 320px; background-color: yellow; animation-delay: 0.6s; }
+.light:nth-child(9) { top: 260px; left: 70px; background-color: red; animation-delay: 0.8s; }
+.light:nth-child(10) { top: 300px; left: 320px; background-color: blue; animation-delay: 1s; }
+.light:nth-child(11) { top: 490px; left: 10px; background-color: yellow; animation-delay: 1.2s; }
+.light:nth-child(12) { top: 420px; left: 320px; background-color: red; animation-delay: 1.4s; }
+.light:nth-child(13) { top: 400px; left: 70px; background-color: blue; animation-delay: 1.6s; }
+
+
+/* Light colors */
+.light.yellow { background-color: yellow; }
+.light.red { background-color: red; }
+.light.blue { background-color: blue; }
+
+/* Keyframes for blinking with delays */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* Staggered animation delays */
+.light.yellow:nth-child(1) { animation-delay: 0s; }
+.light.red:nth-child(2) { animation-delay: 0.2s; }
+.light.blue:nth-child(3) { animation-delay: 0.4s; }
+.light.yellow:nth-child(4) { animation-delay: 0.6s; }
+.light.red:nth-child(5) { animation-delay: 0.8s; }
+.light.blue:nth-child(6) { animation-delay: 1s; }
+.light.yellow:nth-child(7) { animation-delay: 1.2s; }
+.light.red:nth-child(8) { animation-delay: 1.4s; }
+.light.blue:nth-child(9) { animation-delay: 1.6s; }
+
+
+/* Snowflakes */
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: snowfall linear infinite;
+}
+
+/* Generate different sizes and positions */
+.snowflake:nth-child(1) {
+    width: 8px;
+    height: 8px;
+    left: 10%;
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+
+.snowflake:nth-child(2) {
+    width: 6px;
+    height: 6px;
+    left: 20%;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.snowflake:nth-child(3) {
+    width: 10px;
+    height: 10px;
+    left: 30%;
+    animation-duration: 15s;
+    animation-delay: 1s;
+}
+
+.snowflake:nth-child(4) {
+    width: 4px;
+    height: 4px;
+    left: 40%;
+    animation-duration: 8s;
+    animation-delay: 3s;
+}
+
+.snowflake:nth-child(5) {
+    width: 12px;
+    height: 12px;
+    left: 50%;
+    animation-duration: 14s;
+    animation-delay: 0s;
+}
+
+.snowflake:nth-child(6) {
+    width: 5px;
+    height: 5px;
+    left: 60%;
+    animation-duration: 11s;
+    animation-delay: 4s;
+}
+
+.snowflake:nth-child(7) {
+    width: 7px;
+    height: 7px;
+    left: 70%;
+    animation-duration: 9s;
+    animation-delay: 2s;
+}
+
+.snowflake:nth-child(8) {
+    width: 9px;
+    height: 9px;
+    left: 80%;
+    animation-duration: 13s;
+    animation-delay: 1s;
+}
+
+.snowflake:nth-child(9) {
+    width: 6px;
+    height: 6px;
+    left: 90%;
+    animation-duration: 10s;
+    animation-delay: 5s;
+}
+
+footer {
+    background-color: #8ad4ef; 
+    display: flex;
+    justify-content: center;
+}
+footer a {
+    text-decoration: none;
+    color:#c7cddb;
+
+}
+body {
+    background-color: #8ad4ef; 
+}
